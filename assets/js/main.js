@@ -35,17 +35,96 @@
 //Ejercicios para hacer:
 //--------------------------------------------------------------------
 
-// Consigna 1: Crear un Set de números únicos 
-//Crea un Set que almacene números únicos. Agrega al menos 5 números usando el método add(), intenta agregar un número duplicado y luego imprime la cantidad de elementos usando la propiedad size. Muestra el contenido final del Set.
+// // Consigna 1: Crear un Set de números únicos 
+// //Crea un Set que almacene números únicos. Agrega al menos 5 números usando el método add(), intenta agregar un número duplicado y luego imprime la cantidad de elementos usando la propiedad size. Muestra el contenido final del Set.
 
-// Consigna 2: Verificar la existencia de un valor 
-//Crea un Set con los nombres de tus 3 frutas favoritas. Luego, usa el método has() para verificar si una fruta específica está en el Set. Si está, imprime un mensaje que confirme su existencia, y si no está, agrega la fruta al Set.
+// let numerosUnicos = new Set()
 
-// Consigna 3: Eliminar elementos de un Set 
-// Crea un Set con los nombres de 5 lenguajes de programación. Luego elimina uno de los lenguajes utilizando el método delete(). Finalmente, imprime el contenido actualizado del Set y la cantidad de elementos restantes.
+// numerosUnicos.add(10)
+// numerosUnicos.add(20)
+// numerosUnicos.add(30)
+// numerosUnicos.add(40)
+// numerosUnicos.add(50)
 
-// Consigna 4: Vaciar un Set 
-//Crea un Set con al menos 4 nombres de ciudades. Luego, utiliza el método clear() para vaciar el Set. Imprime un mensaje confirmando que el Set está vacío.
+// numerosUnicos.add(30)
 
-// Consigna 5: Combinación de operaciones en un Set 
-//Crea un Set vacío. A continuación, usa un ciclo for para agregar los números del 1 al 10 al Set. Luego, elimina los números pares con otro ciclo for y verifica cuántos números impares quedan en el Set. Usa los métodos add(), delete(), size y has() para resolverlo.
+// console.log("La cantidad de elemetos en el set es:", numerosUnicos.size)
+
+// console.log(numerosUnicos)
+
+
+// // Consigna 2: Verificar la existencia de un valor 
+// //Crea un Set con los nombres de tus 3 frutas favoritas. Luego, usa el método has() para verificar si una fruta específica está en el Set. Si está, imprime un mensaje que confirme su existencia, y si no está, agrega la fruta al Set.
+
+// let frutas = new Set(["melon", "frutilla", "pera"])
+
+// let frutaAAgregar = "kiwi"
+
+// if (frutas.has(frutaAAgregar)) {
+//     console.log(frutaAAgregar + " está en las frutas favoritas")
+// } else {
+//     frutas.add(frutaAAgregar)
+// }
+
+// console.log(frutas)
+
+// // Consigna 3: Eliminar elementos de un Set 
+// // Crea un Set con los nombres de 5 lenguajes de programación. Luego elimina uno de los lenguajes utilizando el método delete(). Finalmente, imprime el contenido actualizado del Set y la cantidad de elementos restantes.
+// let lenguajes = new Set(["JS", "CSS", "Python", "Ruby", "Java"])
+
+// lenguajes.delete("CSS")
+
+// console.log("set actualizado", lenguajes)
+// console.log("Cantidad de elementos restantes", lenguajes.size)
+
+
+// // Consigna 4: Vaciar un Set 
+// //Crea un Set con al menos 4 nombres de ciudades. Luego, utiliza el método clear() para vaciar el Set. Imprime un mensaje confirmando que el Set está vacío.
+
+// let ciudades = new Set(["Córdoba", "Santiago", "Montevideo", "Rio"])
+
+// ciudades.clear();
+
+// if (ciudades.size === 0) {
+//     console.log("el set está vacio")
+// }
+
+
+// // Consigna 5: Combinación de operaciones en un Set
+// //Crea un Set vacío. A continuación, usa un ciclo for para agregar los números del 1 al 10 al Set. Luego, elimina los números pares con otro ciclo for y verifica cuántos números impares quedan en el Set. Usa los métodos add(), delete(), size y has() para resolverlo.
+
+// let numeros = new Set();
+
+// for (let i = 1; i < 11; i++) {
+//     numeros.add(i)
+// }
+
+// console.log(numeros)
+// //11 % 2 === 0
+
+// for (let i = 1; i < 11; i++) {
+//     if (i % 2 === 0) {
+//         numeros.delete(i)
+//     }
+// }
+// console.log(numeros)
+// console.log("Los numeros impares son: ", numeros.size)
+
+
+// // opcion con un for of para eliminar (código de Rodolfo y Juan)
+// let vacio = new Set()
+ 
+// for (let i = 1; i < 11; i++) {
+//     vacio.add(i)
+// }
+ 
+// console.log(vacio)
+ 
+// for (const value of vacio) {  
+//     if (value % 2 === 0) {
+//         vacio.delete(value)
+//     }
+// }
+
+//------------------------------------------------------------
+//------------------------------------------------------------
