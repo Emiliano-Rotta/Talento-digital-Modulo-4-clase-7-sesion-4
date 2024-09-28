@@ -157,34 +157,104 @@
 // console.log(mapa.get("nombre"))
 // console.log(mapa.size)
 
-const edades = new Map()
+// const edades = new Map()
 
-edades.set("Luis", 30)
-edades.set("Pedro", 20)
-edades.set("Juan", 35)
-edades.set("Carlos", 40)
-console.log(edades.get("Juan")) //35
-console.log(edades.has("Juan")) //true
-edades.delete("Juan")  //lo borré
-console.log(edades.get("Juan")) //undefined
-console.log(edades.has("Juan")) //false
+// edades.set("Luis", 30)
+// edades.set("Pedro", 20)
+// edades.set("Juan", 35)
+// edades.set("Carlos", 40)
+// console.log(edades.get("Juan")) //35
+// console.log(edades.has("Juan")) //true
+// edades.delete("Juan")  //lo borré
+// console.log(edades.get("Juan")) //undefined
+// console.log(edades.has("Juan")) //false
 
-console.log(edades.size) //3 (juan está eliminado)
-edades.clear() //borro todo
-console.log(edades.size) //0
+// console.log(edades.size) //3 (juan está eliminado)
+// edades.clear() //borro todo
+// console.log(edades.size) //0
 
 
 // Consigna 1: Crear un Map con información de empleados 
 //Crea un Map donde las claves sean los nombres de empleados y los valores sean sus cargos (por ejemplo, "Gerente", "Desarrollador", "Diseñador"). Usa el método set() para agregar al menos 5 empleados y sus cargos. Luego, imprime el tamaño del Map utilizando la propiedad size y muestra el contenido del Map.
 
+let empleados = new Map();
+empleados.set("Carlos", "Gerente")
+empleados.set("Ana", "Programador")
+empleados.set("Romina", "PM")
+empleados.set("Juan", "Arquitecto")
+empleados.set("Laura", "medica")
+
+console.log(empleados.size)
+
+console.log(empleados)
+
+
 // Consigna 2: Modificar y obtener información en un Map 
 //Crea un Map que contenga nombres de ciudades de España como claves y su población (en millones) como valores. Usa el método get() para obtener la población de una ciudad específica. Luego, actualiza la población de esa ciudad con el método set() e imprime el contenido actualizado del Map.
+let ciudadesEspañolas = new Map()
+
+ciudadesEspañolas.set("Madrid", 3.3)
+ciudadesEspañolas.set("Barcelona", 1.6)
+ciudadesEspañolas.set("Valencia", 0.8)
+ciudadesEspañolas.set("Sevilla", 0.7)
+
+console.log(ciudadesEspañolas.get("Barcelona"))
+ciudadesEspañolas.set("Barcelona", 1.7)
+console.log(ciudadesEspañolas.get("Barcelona"))
+
 
 // Consigna 3: Verificar la existencia de una clave
 // Crea un Map con los nombres de distintos idiomas como claves y el número de hablantes en millones como valores. Verifica si un idioma específico existe en el Map utilizando el método has(). Si no existe, agrega ese idioma con su número estimado de hablantes.
 
+let idiomas = new Map()
+
+idiomas.set("Ingles", 1500)
+idiomas.set("Español", 1000)
+idiomas.set("Aleman", 500)
+idiomas.set("Frances", 250)
+
+let idiomaAVerificar = "Portugues"
+
+if(idiomas.has(idiomaAVerificar)){
+    console.log(idiomaAVerificar + " ya está cargado")
+} else {
+    idiomas.set(idiomaAVerificar, 100)
+    console.log("Agregado con exito")
+}
+
+console.log(idiomas)
+
+
 // Consigna 4: Eliminar un par clave-valor 
 // Crea un Map que contenga nombres de marcas de autos como claves y su país de origen como valores. Luego, elimina una de las marcas utilizando el método delete() e imprime el contenido actualizado del Map y su tamaño.
 
+let marcasAutos = new Map()
+
+marcasAutos.set("Toyota", "Japón")
+marcasAutos.set("Ford", "EEUU")
+marcasAutos.set("BMW", "Alemania")
+marcasAutos.set("Fiat", "Italia")
+
+marcasAutos.delete("Ford")
+
+console.log(marcasAutos)
+
+console.log(marcasAutos.size)
+
 // Consigna 5: Vaciar un Map 
 // Crea un Map con los nombres de 4 continentes como claves y su número de países como valores. Usa el método clear() para vaciar el Map e imprime un mensaje confirmando que el Map está vacío.
+
+let continentes = new Map();
+
+continentes.set("África", 54);
+continentes.set("Europa", 44);
+continentes.set("Asia", 49);
+continentes.set("América", 35);
+
+continentes.clear();
+
+if (continentes.size === 0){
+    console.log("El Map de continentes está vacío.")
+} else {
+    console.log("No se borró correctamente")
+}
