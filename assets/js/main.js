@@ -172,3 +172,19 @@ console.log(edades.has("Juan")) //false
 console.log(edades.size) //3 (juan está eliminado)
 edades.clear() //borro todo
 console.log(edades.size) //0
+
+
+// Consigna 1: Crear un Map con información de empleados 
+//Crea un Map donde las claves sean los nombres de empleados y los valores sean sus cargos (por ejemplo, "Gerente", "Desarrollador", "Diseñador"). Usa el método set() para agregar al menos 5 empleados y sus cargos. Luego, imprime el tamaño del Map utilizando la propiedad size y muestra el contenido del Map.
+
+// Consigna 2: Modificar y obtener información en un Map 
+//Crea un Map que contenga nombres de ciudades de España como claves y su población (en millones) como valores. Usa el método get() para obtener la población de una ciudad específica. Luego, actualiza la población de esa ciudad con el método set() e imprime el contenido actualizado del Map.
+
+// Consigna 3: Verificar la existencia de una clave
+// Crea un Map con los nombres de distintos idiomas como claves y el número de hablantes en millones como valores. Verifica si un idioma específico existe en el Map utilizando el método has(). Si no existe, agrega ese idioma con su número estimado de hablantes.
+
+// Consigna 4: Eliminar un par clave-valor 
+// Crea un Map que contenga nombres de marcas de autos como claves y su país de origen como valores. Luego, elimina una de las marcas utilizando el método delete() e imprime el contenido actualizado del Map y su tamaño.
+
+// Consigna 5: Vaciar un Map 
+// Crea un Map con los nombres de 4 continentes como claves y su número de países como valores. Usa el método clear() para vaciar el Map e imprime un mensaje confirmando que el Map está vacío.
