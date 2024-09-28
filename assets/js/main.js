@@ -127,4 +127,48 @@
 // }
 
 //------------------------------------------------------------
+//                    map
 //------------------------------------------------------------
+
+
+// Un Map es una colección de pares clave-valor, donde tanto las claves como los valores pueden ser de cualquier tipo. A diferencia de los objetos, que solo permiten cadenas como claves, los Maps permiten cualquier tipo de dato como clave, incluyendo objetos.
+
+// Características de 
+// Mantienen el orden de inserción de los elementos.
+// Las claves pueden ser de cualquier tipo (primitivas u objetos).
+// Proporcionan métodos para manipular pares clave-valor.
+
+
+// Métodos Comunes:
+// set(key, value): Agrega o actualiza un par clave-valor.
+// get(key): Devuelve el valor asociado a la clave.
+// delete(key): Elimina el par clave-valor asociado a la clave.
+// has(key): Devuelve true si la clave existe en el Map, de lo contrario, false.
+// clear(): Elimina todos los pares clave-valor del Map.
+// size: Propiedad que devuelve el número de pares clave-valor en el Map.
+
+
+// const mapa = new Map();
+// console.log(mapa)
+// mapa.set("nombre", "Juan")
+// console.log(mapa)
+// mapa.set("edad", 30)
+// console.log(mapa)
+// console.log(mapa.get("nombre"))
+// console.log(mapa.size)
+
+const edades = new Map()
+
+edades.set("Luis", 30)
+edades.set("Pedro", 20)
+edades.set("Juan", 35)
+edades.set("Carlos", 40)
+console.log(edades.get("Juan")) //35
+console.log(edades.has("Juan")) //true
+edades.delete("Juan")  //lo borré
+console.log(edades.get("Juan")) //undefined
+console.log(edades.has("Juan")) //false
+
+console.log(edades.size) //3 (juan está eliminado)
+edades.clear() //borro todo
+console.log(edades.size) //0
